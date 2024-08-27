@@ -1,7 +1,7 @@
 {
   "homepage": "http://ishmeet5ingh.github.io/resource-management-admin-portal",
   "name": "resource-management-admin-portal",
-  "private": true,
+  "private": false,
   "version": "0.0.0",
   "type": "module",
   "scripts": {
