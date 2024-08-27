@@ -7,7 +7,7 @@ import store from "./store/store.js";
 function App() {
   return (
     <Provider store={store}>
-      <HashRouter basename="/resource-management-admin-portal/">
+      <HashRouter >
         <Header />
         <Routes>
           <Route path="/" element={<Home />}>
