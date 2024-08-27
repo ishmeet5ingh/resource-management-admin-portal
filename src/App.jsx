@@ -7,7 +7,7 @@ import store from "./store/store.js";
 function App() {
   return (
     <Provider store={store}>
-      <BrowserRouter>
+      <BrowserRouter basename="/resource-management-admin-portal/">
         <Header />
         <Routes>
           <Route path="/" element={<Home />}>
