@@ -1,10 +1,11 @@
 import React from 'react'
 import { useSelector } from 'react-redux'
+import { Link } from 'react-router-dom'
 
 function Resource({key, dataItem}) {
     let loading = useSelector((state) => state.loader.loading)
-    console.log(loading)
 
+    let dataItemLink = dataItem.link.slice(0, 5)  === "https" ? "www." + dataItem.link.slice(8, dataItem.link.length) : "www."+dataItem.link.slice(7, dataItem.link.length)
   return (
 
     <>
@@ -19,13 +20,12 @@ function Resource({key, dataItem}) {
                 <p className='text-[12px] text-[#7E858E]'>{dataItem.category}</p>
             </div>
         </div>
-        <div className='text-[13px]'>
-            <p className='text-[#0B69FF] mb-3'>{dataItem.link}</p>
+        <div className='text-[13px] flex flex-col gap-3'>
+            <Link to={dataItem.link} className='text-[#0B69FF] '>{dataItemLink}</Link>
             <p className='text-[#7E858E]'>{dataItem.description}</p>
         </div>
     </div>
         ) : <div className='h-[170px] border border-[#D7DFE9] bg-gray-400 '>
-
         </div> }
     </>
   )

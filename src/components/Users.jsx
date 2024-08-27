@@ -8,7 +8,8 @@ import PaginationButtons from './PaginationButtons'
 function Users() {
     let data = useSelector((state) => state.resource.resources)
     data = data?.filter((item) => item.tag === "user")
-    const itemsPerPage = 6;
+    const searchTerm = useSelector(state => state.searchTerm.searchTerm)
+
 
     const {
         currentPage,
@@ -16,11 +17,15 @@ function Users() {
         currentItems,
         goToNextPage,
         goToPreviousPage,
-      } = usePagination(data, itemsPerPage);
+      } = usePagination(data);
+
+      const filteredData = currentItems?.filter((dataItem) =>
+        dataItem.title?.toLowerCase().includes(searchTerm.toLowerCase())
+      );
   return (
     <div>
    <div className="grid lg:grid-cols-3 gap-7 sm:grid-cols-2">
-        {currentItems?.map((dataItem)=>(
+        {filteredData?.map((dataItem)=>(
             <Resource key={dataItem.id} dataItem={dataItem}/>
         ))}
     </div>

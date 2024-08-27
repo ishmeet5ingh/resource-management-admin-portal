@@ -10,7 +10,6 @@ export const ResoucesSlice = createSlice({
     reducers: {
         setResources: (state, action) => {
             state.resources = action.payload
-            console.log(state.resources)
         },
 
         addResource: (state, action) => {
