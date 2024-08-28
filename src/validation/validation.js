@@ -18,8 +18,8 @@ export const itemDetailsValidation = {
     },
 
     maxLength: {
-        value: 250,
-        message: "Not more than 250 characters",
+        value: 500,
+        message: "Not more than 1000 characters",
     },
   },
   icon_url: {
@@ -29,8 +29,8 @@ export const itemDetailsValidation = {
       message: "Enter a valid URL",
     },
     maxLength: {
-        value: 250,
-        message: "Not more than 250 characters",
+        value: 1000,
+        message: "Not more than 1000 characters",
     },
   },
   tag: {
