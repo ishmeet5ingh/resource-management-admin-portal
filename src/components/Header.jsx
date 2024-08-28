@@ -29,7 +29,7 @@ function Header() {
             className='cursor-pointer' 
             onClick={handleDropdownToggle} 
           />
-          {isDropdownOpen && (
+          {(isDropdownOpen && !isAddLoginPage) && (
             <div className='absolute top-full right-0 mt-2 w-48 bg-white border border-[#D7DFE9] rounded shadow-lg'>
               <Link 
                 to="/login" 
