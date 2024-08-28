@@ -1,5 +1,5 @@
 import React, { useEffect } from "react";
-import { Outlet } from "react-router-dom";
+import { Navigate, Outlet, Route, Routes } from "react-router-dom";
 import { Group32, Search } from "../components";
 import axios from "axios";
 import { useDispatch, useSelector } from "react-redux";
@@ -26,6 +26,9 @@ function Home() {
 
   return (
     <div className="xl:px-[149px] md:px-24 px-14  bg-[#FBFBFB] ">
+     <Routes>
+          <Route path="/" element={<Navigate to="login" />} />
+    </Routes>
       <Group32 />
       <Search />
       <Outlet />

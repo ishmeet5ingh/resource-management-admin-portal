@@ -22,10 +22,6 @@ function Group32() {
   
     return (
       <div>
-        {/* Redirect to /resources if no specific tab is selected */}
-        <Routes>
-          <Route path="/" element={<Navigate to="resources" />} />
-        </Routes>
 
         <div className='h-[82px] flex justify-center items-end'>
             <div className='h-10 border md:w-[600px] sm:w-[400px] w-80 border-[#D7DFE9] flex rounded-[4px]'>
