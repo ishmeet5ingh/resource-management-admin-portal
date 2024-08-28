@@ -33,7 +33,7 @@ function ItemDetails() {
   };
 
   return (
-    <div className='w-1/2 '>
+    <div className='md:w-1/2 w-full'>
     <Link to={"/users"} className='ml-7 mt-2 flex items-center gap-1 text-[#7E858E
 ]'> <FaChevronLeft/> Users</Link>
     <div className='flex justify-center '>

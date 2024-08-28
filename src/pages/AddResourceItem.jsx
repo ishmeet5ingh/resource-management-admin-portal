@@ -8,7 +8,7 @@ function AddResourceItem() {
   return (
     <div className=' w-full flex h-[120vh]'>
         <ItemDetails/>
-    <div className='w-1/2 border'>
+    <div className='w-1/2 border md:block hidden'>
         <img src={createItemImage} className='w-full h-full' alt="" />
     </div>
     </div>
