@@ -6,5 +6,7 @@ import Users from "./Users";
 import Search from "./Search"
 import Resource from "./Resource";
 import PaginationButtons from "./PaginationButtons";
+import ItemDetails from "./ItemDetails";
+import Input from "./Input";
 
-export {Header, Group32, Resources, Requests, Users, Search, Resource, PaginationButtons}
+export {Header, Group32, Resources, Requests, Users, Search, Resource, PaginationButtons, ItemDetails, Input}
