@@ -25,7 +25,7 @@ function Resource({key, dataItem}) {
             <p className='text-[#7E858E]'>{dataItem.description}</p>
         </div>
     </div>
-        ) : <div className='h-[170px] border border-[#D7DFE9] bg-gray-400 '>
+        ) : <div className='h-[170px] border border-[#D7DFE9] bg-gray-200 '>
         </div> }
     </>
   )
